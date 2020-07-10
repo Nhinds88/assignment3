@@ -1,6 +1,6 @@
 package com.cst438.assignment3.service;
  
-import com.cst438.assignment2.domain.*;
+import com.cst438.assignment3.domain.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

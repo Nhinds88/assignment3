@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation</title>
+</head>
+<body>
+    <h2 th:inline="text">Your Reservation for a <span th:text="${level}"></span> stay in <span th:text="${city}"></span></h2>
+
+    <p>City: <span th:text="${city}"></span></p> <br />
+    <p>Type of stay: <span th:text="${level}"></span></p> <br />
+    <br />
+    <p>Your confirmation for your reservation is being sent to <span th:text="${email}"></span></p>
+</body>
+</html>

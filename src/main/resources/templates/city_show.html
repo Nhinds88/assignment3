@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>City Weather</title>
+</head>
+<body>
+    <div style="margin-left: 20%; margin-right: 20%; font-size: 20px; background-color: #969493; padding-top: 10%; padding-bottom: 10%; padding-left: 5%; padding-right: 5%">
+        <h2 style="font-size: 40px; font-weight: bolder" th:inline="text">City</h2>
+
+        ID: <span th:inline="text"> [[${cityInfo.id}]] </span> <br />
+        Name: <span th:inline="text"> [[${cityInfo.name}]] </span> <br />
+        Country Code: <span th:inline="text"> [[${cityInfo.countryCode}]] </span> <br />
+        Country Name: <span th:inline="text"> [[${cityInfo.countryName}]] </span> <br />
+        District: <span th:inline="text"> [[${cityInfo.district}]] </span> <br />
+        Population: <span th:inline="text"> [[${cityInfo.population}]] </span> <br />
+        Local Weather: <span th:inline="text"> [[${cityInfo.temp}]] &#176;F</span> <br />
+        Local Time: <span th:inline="text"> [[${cityInfo.time}]] </span> <br />
+    </div>
+</body>
+</html>

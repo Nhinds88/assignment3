@@ -5,11 +5,13 @@
     <title>Reservation</title>
 </head>
 <body>
-    <h2 th:inline="text">Your Reservation for a <span th:text="${level}"></span> stay in <span th:text="${city}"></span></h2>
+    <div style="margin-left: 20%; margin-right: 20%; font-size: 20px; padding-top: 10%; padding-bottom: 10%; padding-left: 5%; padding-right: 5%">
+        <h2 style="font-weight: bolder; font-size: 30px" th:inline="text">Your Reservation for a <span th:text="${level}"></span> stay in <span th:text="${city}"></span></h2>
 
-    <p>City: <span th:text="${city}"></span></p> <br />
-    <p>Type of stay: <span th:text="${level}"></span></p> <br />
-    <br />
-    <p>Your confirmation for your reservation is being sent to <span th:text="${email}"></span></p>
+        <div style="background-color: #969493; padding: 5%">
+            <p>The details of your get away at the budget level <span th:text="${level}"></span> to <span th:text="${city}"></span>
+               are being emailed to <span th:text="${email}"></span></p>
+        </div>
+    </div>
 </body>
 </html>

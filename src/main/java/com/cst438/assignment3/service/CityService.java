@@ -41,6 +41,7 @@ public class CityService {
 		return new CityInfo(c, country.getName(), weather.getFahr(), weather.getLocalTime());
 	}
 
+	// created the text string and sends to the back end application
 	public void requestReservation(
 			String cityName,
 			String level,

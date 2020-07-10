@@ -31,6 +31,7 @@ public class CityController {
 		}
 	}
 
+	// this post mapping is used to get the customers input and send it out using the requestReservation method in CityService
 	@PostMapping("/cities/reservation")
 	public String createReservation(
 			@RequestParam("city") String cityName,
@@ -41,7 +42,7 @@ public class CityController {
 		model.addAttribute("level", level);
 		model.addAttribute("email", email);
 		cityService.requestReservation(cityName, level, email);
-		return "request_reservation";
 
+		return "request_reservation";
 	}
 }

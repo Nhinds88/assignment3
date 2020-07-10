@@ -19,7 +19,7 @@
 
         <p th:inline="text">For a fabulous weekend get away for 2 to [[${cityInfo.name}]] sign up here.</p>
         <br>
-        <form action="#" th:action="@{/cities/reservation" method="post">
+        <form action="#" th:action="@{/cities/reservation}" method="post">
             <input type="hidden" name="city" th:value="${cityInfo.getName()}"><label for="email">Email:</label>
             <input type="text" name="email" id="email"> <br />
             <input type="radio" name="level" id="luxury" value="Luxury"><label for="luxury">Luxury $1000</label> <br />

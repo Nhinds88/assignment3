@@ -21,10 +21,15 @@
         <br>
         <form action="#" th:action="@{/cities/reservation}" method="post">
             <input type="hidden" name="city" th:value="${cityInfo.getName()}"><label for="email">Email:</label>
-            <input type="text" name="email" id="email"> <br />
-            <input type="radio" name="level" id="luxury" value="Luxury"><label for="luxury">Luxury $1000</label> <br />
+            <br />
+            <input type="text" name="email" id="email" required> <br />
+            <br />
+            <input type="radio" name="level" id="luxury" value="Luxury" required><label for="luxury">Luxury $1000</label> <br />
+            <br />
             <input type="radio" name="level" id="veryGood" value="Very Good"><label for="veryGood">Very Good $500</label> <br />
+            <br />
             <input type="radio" name="level" id="good" value="Good"><label for="good">Good $350</label> <br />
+            <br />
             <input type="submit" value="Submit" />
         </form>
     </div>

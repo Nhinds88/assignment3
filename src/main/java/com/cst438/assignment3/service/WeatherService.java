@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.cst438.assignment2.domain.TempAndTime;
+import com.cst438.assignment3.domain.TempAndTime;
 
 @Service
 public class WeatherService {

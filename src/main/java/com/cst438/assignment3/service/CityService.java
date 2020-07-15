@@ -1,6 +1,8 @@
 package com.cst438.assignment3.service;
 
-import com.cst438.assignment2.domain.*;
+import com.cst438.assignment3.domain.*;
+import org.springframework.amqp.core.FanoutExchange;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,12 @@ public class CityService {
 	
 	@Autowired
 	private WeatherService weatherService;
+
+	@Autowired
+	private RabbitTemplate rabbitTemplate;
+
+	@Autowired
+	private FanoutExchange fanout;
 	
 	public CityInfo getCityInfo(String cityName) {
 		
@@ -32,5 +40,14 @@ public class CityService {
 
 		return new CityInfo(c, country.getName(), weather.getFahr(), weather.getLocalTime());
 	}
-	
+
+	// created the text string and sends to the back end application
+	public void requestReservation(
+			String cityName,
+			String level,
+			String email) {
+		String msg = "{\"cityName\": \"" + cityName + "\" \"level\": \"" + level + "\" \"email\": \"" + email + "\"}";
+		System.out.println("Sending message:" + msg);
+		rabbitTemplate.convertSendAndReceive(fanout.getName(), "", msg); // routing key none.
+	}
 }
